@@ -6,5 +6,7 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     raw_neems_path = args[0]
     vec_neems_path = args[1]
+    training_data_result_path = args[2]
 
     auto_learner.transform_raw_neems_to_vec_neems(raw_neems_path, vec_neems_path)
+    auto_learner.generate_grasping_learning_data(vec_neems_path, training_data_result_path)
