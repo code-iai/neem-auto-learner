@@ -1,0 +1,9 @@
+narrative2vec == 2.0.1
+grasping-learning-data-generator == 1.0.2
+PyYAML == 3.12
+nltk == 3.2.2
+graphviz == 0.5.2
+num2words == 0.5.7
+word2number == 1.1
+grasping-position-inference == 1.0.0
+grasping_type_inference == 1.0.0
