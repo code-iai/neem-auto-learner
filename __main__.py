@@ -4,7 +4,7 @@ from grasping_learning_data_generator.position import generate_learning_data_fro
 import grasping_position_inference.training.model_generator
 from grasping_type_inference.learning import train_all_grasping_mlns
 from os import listdir
-from os.path import join
+from os.path import join, exists
 
 NARRATIVES_PATH = 'narratives'
 VECTORS_PATH = 'vectors'
@@ -16,9 +16,9 @@ MLN_PATH = join(MODELS_PATH, 'mln')
 def transform_raw_neems_to_vec_neems(path, result_dir_path):
     for neemName in listdir(path):
             neem_path = join(path, neemName,'{}.owl'.format(neemName))
-
-            narrative = Narrative(neem_path)
-            narrative.transform_to_csv_file(result_dir_path)
+            if exists(neem_path):
+                narrative = Narrative(neem_path)
+                narrative.transform_to_csv_file(result_dir_path)
 
 
 def generate_grasping_learning_data(path, result_dir_path):
