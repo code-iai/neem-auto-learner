@@ -1,6 +1,6 @@
 narrative2vec == 2.0.1
 grasping-learning-data-generator == 1.0.2
-PyYAML == 3.12
+PyYAML == 5.4
 nltk == 3.2.2
 graphviz == 0.5.2
 num2words == 0.5.7
